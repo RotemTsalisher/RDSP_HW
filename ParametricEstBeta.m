@@ -27,4 +27,4 @@ figure(); plot(est_psd_ma1);
 
 % second order ma
 est_psd_ma2 = func(r_x,[0:255],2);
-figure(); plot(est_psd_ma2);
+figure(); plot(abs(est_psd_ma2));
