@@ -13,6 +13,6 @@ function myWelch(x,N_signal,L,D,real_psd)
     xMat_fft = (1/L)*abs(fft(xMat,Nfft,2)).^2; % modified periodogram for each row
     welchPsd = mean(xMat_fft,1); % welch -> avg of all periodograms
     figure(); plot(wgrid(1:portion),welchPsd(1:portion),wgrid(1:portion),real_psd,"black--");
-    title("Welch Estimation of P_x(e^j^w)"); xlabel("w [rad/sec]");
+    title("Welch Estimation of P_x(e^j^w)",["N_s_i_g_n_a_l = " + num2str(N_signal)]); xlabel("w [rad/sec]");
     ylabel("P_w_e_l_c_h_,_x(e^j^w)"); grid on; axis tight;
 end

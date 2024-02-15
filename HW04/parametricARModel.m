@@ -1,6 +1,4 @@
 function [b,a] = parametricARModel(r,p)
-    % B(rx)*a = v(sol)
-    % a = B^(-1)*v(sol)
     N = length(r) + 1;
     B = [];
     for i = [1:p]
@@ -10,5 +8,4 @@ function [b,a] = parametricARModel(r,p)
     B_ = inv(B);
     a = B_*v; a = [1, a'];
     b = sum(a.*[r(N/2:N/2+p)]);
-
 end

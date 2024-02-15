@@ -3,7 +3,7 @@ function [x,y_,real_psd_ma,real_psd_ar] = generateSig(N_signal)
 fs = 44100; 
 sigma = 1;
 mu = 0;
-N_ma = N_signal; N_ar = 15*N_signal; N = N_signal*4; portion = N/2;
+N_ma = N_signal; N_ar = 15*N_signal; N = N_signal*4;
 w_ma = sigma*randn(1,N_ma) + mu;
 w_ar = sigma*randn(1,N_ar) + mu;
 b_ma = [1, 0.3, 0.8]; b_ar = 1;
